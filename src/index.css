@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
+
+@import "tw-animate-css";
+
+@theme {
+  --color-black-ground: #000000;
+  --color-primary: #2d9f9f;
+  --color-primary-dark: #004d4d;
+  --color-primary-light: #00b3b3;
+  --color-text-base: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-black-ground);
+    color: var(--color-text-base);
+  }
+}
