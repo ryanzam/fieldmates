@@ -107,10 +107,64 @@ export const personas = [
     }
 ];
 
-export const iconMap = {
-    Clock,
-    MapPin,
-    DollarSign,
-    Smartphone,
-    BarChart3
+export const plans = [
+    {
+        name: "Free",
+        price: "$0",
+        period: "forever",
+        description: "Perfect for trying out GeoFence with a small team",
+        features: [
+            "Up to 3 users",
+            "5 geofences",
+            "Basic real-time map",
+            "Manual check-in/out",
+            "7-day location history",
+            "Email support"
+        ],
+        cta: "Start Free",
+        popular: false
+    },
+    {
+        name: "Pro",
+        price: "$9",
+        period: "per user/month",
+        description: "Full-featured for growing service businesses",
+        features: [
+            "Unlimited users",
+            "Unlimited geofences",
+            "Auto check-in/out triggers",
+            "Live tracking (10s updates)",
+            "Photo verification",
+            "90-day history",
+            "Export reports",
+            "Priority support"
+        ],
+        cta: "Start 14-Day Trial",
+        popular: true
+    },
+    {
+        name: "Enterprise",
+        price: "Custom",
+        period: "contact us",
+        description: "For large teams with advanced needs",
+        features: [
+            "Everything in Pro",
+            "SSO / SAML",
+            "API access",
+            "Custom integrations",
+            "Dedicated account manager",
+            "SLA guarantee",
+            "On-premise option",
+            "Custom training"
+        ],
+        cta: "Contact Sales",
+        popular: false
+    }
+];
+
+export const footerLinks = {
+    Product: ["Features", "Pricing", "Roadmap", "Changelog"],
+    Resources: ["Documentation", "API Reference", "Blog", "Case Studies"],
+    Company: ["About", "Careers", "Contact", "Partners"],
+    Legal: ["Privacy Policy", "Terms of Service", "GDPR", "Security"]
 };

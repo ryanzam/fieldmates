@@ -71,10 +71,10 @@ const Hero = () => {
                             transition={{ delay: 0.6 }}
                             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
-                            <Button variant="default" size="lg">
+                            <Button variant="default" size="lg" className="cursor-pointer hover:text-black">
                                 Start Free Trial
                             </Button>
-                            <Button variant="secondary" size="lg">
+                            <Button variant="secondary" size="lg" className="cursor-pointer hover:text-primary bg-primary-dark/50">
                                 View Product Guide
                             </Button>
                         </motion.div>
