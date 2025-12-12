@@ -1,3 +1,4 @@
+import Vision from '@/components/Vision'
 import Nav from '../components/Nav'
 import Hero from '@/components/Hero'
 
@@ -7,6 +8,7 @@ const Index = () => {
             <Nav />
             <main>
                 <Hero />
+                <Vision />
             </main>
         </div>
     )
