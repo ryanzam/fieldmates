@@ -1,12 +1,11 @@
-import { Shield, Sparkles, Target, TrendingUp } from "lucide-react";
+import { BarChart3, Briefcase, Calculator, Clock, DollarSign, MapPin, Shield, Smartphone, Sparkles, Target, TrendingUp, Wrench } from "lucide-react";
 
 export const navLinks = [
     { href: "#vision", label: "Vision" },
-    { href: "#market", label: "Market" },
     { href: "#personas", label: "Personas" },
-    { href: "#features", label: "Features" },
+    /* { href: "#features", label: "Features" },
     { href: "#design", label: "Design" },
-    { href: "#architecture", label: "Architecture" },
+    { href: "#architecture", label: "Architecture" }, */
     { href: "#pricing", label: "Pricing" },
 ];
 
@@ -32,3 +31,86 @@ export const visionPoints = [
         description: "Set up geofences in seconds with our intuitive map interface—no technical expertise required."
     }
 ];
+
+export const personas = [
+    {
+        role: "Team Manager",
+        name: "John D.",
+        title: "Owner, John Landscaping (5 employees)",
+        avatar: "👨‍💼",
+        color: "primary",
+        demographics: {
+            age: "42",
+            tech: "Moderate",
+            device: "iPhone 13"
+        },
+        goals: [
+            "Know where crew is without constant calls",
+            "Verify job completion for billing disputes",
+            "Reduce time spent on scheduling coordination"
+        ],
+        frustrations: [
+            "Lost 2 hours/day to phone-based coordination",
+            "Client complained crew was late—no proof otherwise",
+            "Payroll disputes over arrival times"
+        ],
+        quote: "I just need to know my guys are where they say they are, without micromanaging them.",
+        icon: Briefcase
+    },
+    {
+        role: "Field Worker",
+        name: "Harri T.",
+        title: "Senior Technician, Pest Control Pros",
+        avatar: "👷",
+        color: "status-active",
+        demographics: {
+            age: "28",
+            tech: "High",
+            device: "Samsung Galaxy"
+        },
+        goals: [
+            "Automatic time logging (no manual entry)",
+            "Clear task assignments with addresses",
+            "Easy photo documentation for proof"
+        ],
+        frustrations: [
+            "Forgetting to clock in/out costs money",
+            "Boss calls constantly asking for location",
+            "Previous app drained phone battery"
+        ],
+        quote: "If it works in the background and doesn't kill my battery, I'll use it.",
+        icon: Wrench
+    },
+    {
+        role: "Office Admin",
+        name: "Sara C.",
+        title: "Supervisor, CleanRight Services",
+        avatar: "👩‍💻",
+        color: "status-transit",
+        demographics: {
+            age: "35",
+            tech: "High",
+            device: "Desktop + iPad"
+        },
+        goals: [
+            "Real-time visibility without calling field",
+            "Export reports for payroll processing",
+            "Quick re-assignment when issues arise"
+        ],
+        frustrations: [
+            "Reconciling timesheets takes 3 hours weekly",
+            "No central view of team status",
+            "Current tool too complex for simple needs"
+        ],
+        quote: "I need a dashboard I can glance at and instantly know what's happening.",
+        icon: Calculator
+    }
+];
+
+export const iconMap = {
+    Clock,
+    MapPin,
+    DollarSign,
+    Smartphone,
+    BarChart3
+};
