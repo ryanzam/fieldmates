@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './App.css'
 import Index from "./pages/Index"
 import NotFound from "./pages/NotFound"
+import Live from "./pages/Live"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/live-map" element={<Live />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
