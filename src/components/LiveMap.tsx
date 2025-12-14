@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import React from 'react'
 
 const teamMembers = [
     { id: 1, name: "Alex", x: 25, y: 35, status: "active" },

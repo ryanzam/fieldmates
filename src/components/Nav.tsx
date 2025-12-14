@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { MapPin, Menu, X } from 'lucide-react';
+import { MapPin, Menu, Radio, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
 import { navLinks } from '../constants';
 import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
@@ -50,6 +51,12 @@ const Nav = () => {
 
                         {/* CTA */}
                         <div className="hidden md:flex items-center gap-3">
+                            <Link to="/live-map">
+                                <Button variant="outline" size="sm" className="gap-1.5 cursor-pointer border-primary-dark rounded">
+                                    <Radio className="h-3.5 w-3.5 text-green-500" />
+                                    Live Map
+                                </Button>
+                            </Link>
                             <Button variant="ghost" size="sm" className='cursor-pointer hover:text-primary'>Log In</Button>
                             <Button variant="default" size="sm" className='cursor-pointer hover:text-black'>Start Free</Button>
                         </div>
