@@ -5,12 +5,14 @@ import { ArrowLeft, MapPin, Radio, Circle, Layers, RefreshCw, Loader2, AlertCirc
 import { Link } from 'react-router-dom'
 import { Badge } from "@/components/ui/badge"
 import { useState } from 'react'
-import type { TeamMember } from '@/types/mongodb'
+import type { Geofence, TeamMember } from '@/types/mongodb'
 import { getTimeAgo } from '@/utils'
+import RealtimeMap from '@/components/RealtimeMap'
 
-const Live = () => {
+const Realtime = () => {
 
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [geofences, setGeofences] = useState<Geofence[]>([]);
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [showGeofences, setShowGeofences] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -188,7 +190,16 @@ const Live = () => {
             </div>
           </motion.aside>
 
-
+          {/* Map */}
+          <div className="flex-1 relative">
+            <RealtimeMap
+              className="absolute inset-0"
+              teamMembers={filteredMembers}
+              geofences={showGeofences ? geofences : []}
+              selectedMember={selectedMember}
+              onMemberSelect={setSelectedMember}
+            />
+          </div>
 
         </div>)
       }
@@ -196,4 +207,4 @@ const Live = () => {
     </div>)
 }
 
-export default Live
+export default Realtime
