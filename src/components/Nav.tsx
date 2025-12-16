@@ -57,8 +57,12 @@ const Nav = () => {
                                     Live Map
                                 </Button>
                             </Link>
-                            <Button variant="ghost" size="sm" className='cursor-pointer hover:text-primary'>Log In</Button>
-                            <Button variant="default" size="sm" className='cursor-pointer hover:text-black'>Start Free</Button>
+                            <Link to="/signin">
+                                <Button variant="ghost" size="sm" className='cursor-pointer hover:text-primary'>Log In</Button>
+                            </Link>
+                            <Link to="/signup">
+                                <Button variant="default" size="sm" className='cursor-pointer hover:text-black'>Start Free</Button>
+                            </Link>
                         </div>
 
                         {/* Mobile menu button */}
