@@ -1,9 +1,14 @@
+import { motion } from 'framer-motion'
 import { ArrowLeft, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const Register = () => {
     return (
-        <div className='mx-auto max-w-md '>
+        <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mx-auto max-w-md '>
             <div className='flex justify-center items-center flex-col my-8'>
                 <MapPin color='#2d9f9f' size={80} className='bg-shadow-primary' />
                 <p className='text-white/50'>Register your account</p>
@@ -51,7 +56,7 @@ const Register = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
