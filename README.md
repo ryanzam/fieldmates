@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Fieldmates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Team coordination tool for remote field workers**
 
-Currently, two official plugins are available:
+Fieldmates helps teams of mobile / remote workers (field service technicians, delivery teams, inspectors, surveyors, maintenance crews, etc.) stay connected, assigned, and productive — even when they're spread across locations with limited connectivity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Currently in **early development** / proof-of-concept stage.
 
-## React Compiler
+## ✨ Features (planned / in-progress)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Real-time task assignment & status updates
+- Location check-ins & geofencing
+- Offline-first support for poor connectivity areas
+- Team messaging & announcements
+- Photo / document attachments from the field
+- Simple dashboard for coordinators / dispatchers
+- Mobile-friendly web interface (PWA-capable)
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 19 + TypeScript + Vite
+- **Styling**: Tailwind CSS
+- **State & Data Fetching**: (t.b.d. — likely TanStack Query / Zustand / Redux Toolkit)
+- **Backend** (planned): Node.js / Express or Next.js API routes
+- **Database** (planned): MongoDB
+- **Authentication** (planned): JWT or NextAuth / Clerk
+- **Deployment** (future): Vercel / Netlify (frontend), Render / Railway (backend)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Quick Start (Development)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js ≥ 20
+- npm / yarn
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ryanzam/fieldmates.git
+cd fieldmates
+
+pnpm install
+# or
+npm install
+# or
+yarn install
+
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+fieldmates/
+├── public/                 → static assets
+├── src/
+│   ├── assets/             → images, icons, etc.
+│   ├── components/         → reusable UI components
+│   ├── pages/              → page-level components 
+│   ├── constants/          → all the constants
+│   ├── services/           → services required
+ (or app router if using)
+│   ├── hooks/              → custom React hooks
+│   ├── lib/                → utilities, api clients, constants
+│   ├── types/              → TypeScript type definitions
+│   ├── App.tsx
+│   └── main.tsx
+├── .eslintrc.cjs           → ESLint configuration
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Screenshots
+![alt text](c:/Users/ran/Downloads/fieldmates.gif)
