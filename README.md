@@ -53,7 +53,7 @@ yarn dev
 ```
 
 ## 📂 Project Structure
-
+```
 fieldmates/
 ├── public/                 → static assets
 ├── src/
@@ -73,6 +73,6 @@ fieldmates/
 ├── tsconfig.json
 ├── vite.config.ts
 └── package.json
-
+```
 ### Screenshots
-![alt text](c:/Users/ran/Downloads/fieldmates.gif)
+![fieldmates](https://github.com/user-attachments/assets/efe5927a-de34-456f-bd0e-912a516ba39d)
